@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLForm", "MLForm.csproj", "{56DBA28E-DCD3-490F-A8B5-25406C0CAABA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLConsole", "..\MLConsole\MLConsole.csproj", "{251E2D7A-88D2-493A-986A-7A9C753F654F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56DBA28E-DCD3-490F-A8B5-25406C0CAABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DBA28E-DCD3-490F-A8B5-25406C0CAABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DBA28E-DCD3-490F-A8B5-25406C0CAABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DBA28E-DCD3-490F-A8B5-25406C0CAABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251E2D7A-88D2-493A-986A-7A9C753F654F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251E2D7A-88D2-493A-986A-7A9C753F654F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251E2D7A-88D2-493A-986A-7A9C753F654F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251E2D7A-88D2-493A-986A-7A9C753F654F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C63518D2-A704-457C-BA51-DD5BC54E9D75}
+	EndGlobalSection
+EndGlobal
