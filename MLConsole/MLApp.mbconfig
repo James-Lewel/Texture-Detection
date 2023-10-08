@@ -4,7 +4,7 @@
   "DataSource": {
     "Type": "Folder",
     "Version": 1,
-    "FolderPath": "C:\\Users\\padec\\Downloads\\Project Taiwan\\Data\\train"
+    "FolderPath": "C:\\Users\\padec\\Downloads\\Texture-Detection\\Data\\train"
   },
   "Environment": {
     "Type": "LocalCPU",
