@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             groupBox = new GroupBox();
+            captureButton = new Button();
+            stopButton = new Button();
+            predictButton = new Button();
             resultGroupBox = new GroupBox();
+            fpsLabel = new Label();
             outputLabel = new Label();
             cameraOutput = new PictureBox();
             cameraComboBox = new ComboBox();
-            fpsLabel = new Label();
             groupBox.SuspendLayout();
             resultGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cameraOutput).BeginInit();
@@ -41,6 +44,9 @@
             // 
             // groupBox
             // 
+            groupBox.Controls.Add(captureButton);
+            groupBox.Controls.Add(stopButton);
+            groupBox.Controls.Add(predictButton);
             groupBox.Controls.Add(resultGroupBox);
             groupBox.Controls.Add(cameraOutput);
             groupBox.Controls.Add(cameraComboBox);
@@ -51,24 +57,65 @@
             groupBox.TabStop = false;
             groupBox.Text = "Menu";
             // 
+            // captureButton
+            // 
+            captureButton.Location = new Point(441, 258);
+            captureButton.Name = "captureButton";
+            captureButton.Size = new Size(239, 29);
+            captureButton.TabIndex = 5;
+            captureButton.Text = "Capture Panorama";
+            captureButton.UseVisualStyleBackColor = true;
+            captureButton.Click += captureButton_Click;
+            // 
+            // stopButton
+            // 
+            stopButton.Enabled = false;
+            stopButton.Location = new Point(441, 223);
+            stopButton.Name = "stopButton";
+            stopButton.Size = new Size(239, 29);
+            stopButton.TabIndex = 4;
+            stopButton.Text = "Stop Predicting";
+            stopButton.UseVisualStyleBackColor = true;
+            stopButton.Click += stopButton_Click;
+            // 
+            // predictButton
+            // 
+            predictButton.Location = new Point(441, 188);
+            predictButton.Name = "predictButton";
+            predictButton.Size = new Size(239, 29);
+            predictButton.TabIndex = 3;
+            predictButton.Text = "Start Predict";
+            predictButton.UseVisualStyleBackColor = true;
+            predictButton.Click += predictButton_Click;
+            // 
             // resultGroupBox
             // 
             resultGroupBox.Controls.Add(fpsLabel);
             resultGroupBox.Controls.Add(outputLabel);
-            resultGroupBox.Location = new Point(441, 26);
+            resultGroupBox.Location = new Point(441, 31);
             resultGroupBox.Name = "resultGroupBox";
-            resultGroupBox.Size = new Size(239, 375);
+            resultGroupBox.Size = new Size(239, 151);
             resultGroupBox.TabIndex = 2;
             resultGroupBox.TabStop = false;
             resultGroupBox.Text = "Result";
+            // 
+            // fpsLabel
+            // 
+            fpsLabel.AutoSize = true;
+            fpsLabel.Location = new Point(11, 118);
+            fpsLabel.Name = "fpsLabel";
+            fpsLabel.Size = new Size(35, 20);
+            fpsLabel.TabIndex = 1;
+            fpsLabel.Text = "FPS:";
             // 
             // outputLabel
             // 
             outputLabel.AutoSize = true;
             outputLabel.Location = new Point(11, 28);
             outputLabel.Name = "outputLabel";
-            outputLabel.Size = new Size(0, 20);
+            outputLabel.Size = new Size(115, 20);
             outputLabel.TabIndex = 0;
+            outputLabel.Text = "Predicted Label:";
             // 
             // cameraOutput
             // 
@@ -76,6 +123,7 @@
             cameraOutput.Location = new Point(6, 70);
             cameraOutput.Name = "cameraOutput";
             cameraOutput.Size = new Size(424, 331);
+            cameraOutput.SizeMode = PictureBoxSizeMode.StretchImage;
             cameraOutput.TabIndex = 1;
             cameraOutput.TabStop = false;
             // 
@@ -87,14 +135,6 @@
             cameraComboBox.Size = new Size(424, 28);
             cameraComboBox.TabIndex = 0;
             cameraComboBox.SelectedIndexChanged += cameraComboBox_SelectedIndexChanged;
-            // 
-            // fpsLabel
-            // 
-            fpsLabel.AutoSize = true;
-            fpsLabel.Location = new Point(11, 347);
-            fpsLabel.Name = "fpsLabel";
-            fpsLabel.Size = new Size(0, 20);
-            fpsLabel.TabIndex = 1;
             // 
             // MLForm
             // 
@@ -123,5 +163,8 @@
         private GroupBox resultGroupBox;
         private Label outputLabel;
         private Label fpsLabel;
+        private Button stopButton;
+        private Button predictButton;
+        private Button captureButton;
     }
 }
