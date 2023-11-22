@@ -50,12 +50,14 @@ namespace Texture_Detection
 
             if (capture.IsOpened())
             {
+                predictButton.Enabled = true;
                 frame = new Mat();
                 await Task.Run(CaptureFrames);
             }
             else
             {
                 MessageBox.Show("Error opening the selected camera.");
+                cameraComboBox.SelectedIndex = 0;
             }
         }
 
@@ -163,11 +165,6 @@ namespace Texture_Detection
             }
 
             StartCameraAsync();
-        }
-
-        private void captureButton_Click(object sender, EventArgs e)
-        {
-            // Your captureButton_Click logic here
         }
     }
 }

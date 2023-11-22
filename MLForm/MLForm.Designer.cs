@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             groupBox = new GroupBox();
-            captureButton = new Button();
             stopButton = new Button();
             predictButton = new Button();
             resultGroupBox = new GroupBox();
@@ -44,7 +43,7 @@
             // 
             // groupBox
             // 
-            groupBox.Controls.Add(captureButton);
+            groupBox.Controls.Add(fpsLabel);
             groupBox.Controls.Add(stopButton);
             groupBox.Controls.Add(predictButton);
             groupBox.Controls.Add(resultGroupBox);
@@ -56,16 +55,6 @@
             groupBox.TabIndex = 0;
             groupBox.TabStop = false;
             groupBox.Text = "Menu";
-            // 
-            // captureButton
-            // 
-            captureButton.Location = new Point(441, 258);
-            captureButton.Name = "captureButton";
-            captureButton.Size = new Size(239, 29);
-            captureButton.TabIndex = 5;
-            captureButton.Text = "Capture Panorama";
-            captureButton.UseVisualStyleBackColor = true;
-            captureButton.Click += captureButton_Click;
             // 
             // stopButton
             // 
@@ -80,6 +69,7 @@
             // 
             // predictButton
             // 
+            predictButton.Enabled = false;
             predictButton.Location = new Point(441, 188);
             predictButton.Name = "predictButton";
             predictButton.Size = new Size(239, 29);
@@ -90,11 +80,10 @@
             // 
             // resultGroupBox
             // 
-            resultGroupBox.Controls.Add(fpsLabel);
             resultGroupBox.Controls.Add(outputLabel);
-            resultGroupBox.Location = new Point(441, 31);
+            resultGroupBox.Location = new Point(441, 70);
             resultGroupBox.Name = "resultGroupBox";
-            resultGroupBox.Size = new Size(239, 151);
+            resultGroupBox.Size = new Size(239, 112);
             resultGroupBox.TabIndex = 2;
             resultGroupBox.TabStop = false;
             resultGroupBox.Text = "Result";
@@ -102,7 +91,7 @@
             // fpsLabel
             // 
             fpsLabel.AutoSize = true;
-            fpsLabel.Location = new Point(11, 118);
+            fpsLabel.Location = new Point(441, 31);
             fpsLabel.Name = "fpsLabel";
             fpsLabel.Size = new Size(35, 20);
             fpsLabel.TabIndex = 1;
@@ -111,7 +100,7 @@
             // outputLabel
             // 
             outputLabel.AutoSize = true;
-            outputLabel.Location = new Point(11, 28);
+            outputLabel.Location = new Point(11, 39);
             outputLabel.Name = "outputLabel";
             outputLabel.Size = new Size(115, 20);
             outputLabel.TabIndex = 0;
@@ -149,6 +138,7 @@
             Text = "Texture Detection";
             FormClosed += MLForm_FormClosed;
             groupBox.ResumeLayout(false);
+            groupBox.PerformLayout();
             resultGroupBox.ResumeLayout(false);
             resultGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)cameraOutput).EndInit();
@@ -165,6 +155,5 @@
         private Label fpsLabel;
         private Button stopButton;
         private Button predictButton;
-        private Button captureButton;
     }
 }
